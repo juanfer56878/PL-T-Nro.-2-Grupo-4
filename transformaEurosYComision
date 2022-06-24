@@ -1,0 +1,48 @@
+Análisis y determinación de requerimiento:
+-----------------------------------------
+Datos de entrada           Datos de salida
+euros			            dolares
+							dolaresReales
+							comision
+
+Esquemas adicionales:
+--------------------
+              dolares = euros * 1.05
+              comision = dolares * 0.05
+              dolaresReales = dolares - comision
+
+Requerimientos:
+---------------
+ Este algoritmo nos permite :
+   Calcular el monto el cual el banco debe otorgar a sus clientesque han recibido transferencias mediante euros.
+
+  Diseno:
+-------
+1) Solicitar el valor en euros
+3) Aplicar la formula : dolares= euros* 1.05
+4) Aplicar la formula : comision = dolares* 0.05
+5) Aplicar la formula : dolaresReales = dolares - descuento
+6) Mostrar la transferencia total transformada a dolares 
+7) Mostrar el valor de la comision que el banco(Debito) ah cobrado
+8) Mostar el monto real que el cliente recibira
+
+Implementacion
+--------------
+Inicio
+		Variables 
+				Real euros, dolares, dolaresReales, comision;
+
+Escribir (“Ingrese el valor en euros: ”);
+Leer (euros);
+
+dolares = euros * 1.05;
+comision = dolares * 0.05;
+dolaresReales = dolares - comision;
+
+Escribir (“La transferencia total transformada a dolares es:$” + dolares);
+
+Escribir (“El valor de comison acogido por el banco es:$” + comision);
+
+Escribir (“El monto real ha recibir en total es:$” + dolaresReales);
+
+Fin

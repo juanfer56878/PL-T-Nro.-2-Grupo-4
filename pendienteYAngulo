@@ -1,0 +1,59 @@
+Análisis y determinación de requerimiento:
+-----------------------------------------
+Datos de entrada   Datos de salida
+puntoAX           	Pendiente
+puntoAY          	anguloInclinación
+puntoBX				anguloEnRadianes
+puntoBY
+Esquemas adicionales:
+------------------------
+	Pendiente: Es la medida de la inclinación de una recta
+  	
+ 	pendiente = (Y2 - Y1) / (X2 - X1)
+	Ángulo de inclinación de una recta: Es el ángulo que se forma al coincidir con el eje x.
+ 	anguloEnRadianes = atan(pendiente)
+	Para transformar esto en un ángulo en grados aplicamos la fórmula:
+ 	anguloInclinacion = (anguloEnRadianes/PI)*180
+Requerimientos:
+---------------
+ 	Determinar la pendiente de la recta
+ 	Determinar el ángulo de inclinación en grados de la recta
+ Diseño:
+----------
+ 1) Solicitar las coordenadas del punto X en A
+ 2) Solicitar las coordenadas del punto Y en A
+ 3) Solicitar las coordenadas del punto X en B
+ 4) Solicitar las coordenadas del punto Y en B
+ 5) Calcular pendiente: pendiente = (PuntoBY - Punto AY) / (PuntoBX - PuntoAX)
+ 6) Calcular el angulo en radianes = atan(pendiente)
+ 7) Calcular el angulo de inclinación en grados: anguloInclinación = (anguloEnRadianes/PI)*180
+ 8) Mostrar los valores de la pendiente
+ 9) Mostrar los valores de la inclinacion en grados
+
+ Implementación
+---------------------
+Inicio
+	Variables
+ 			Entero puntoAX, puntoAY, puntoBX, puntoBY;
+ 			Real pendiente, anguloInclinacion, anguloEnRadianes;
+	Constantes
+ 			Real Pi = 3.1416;
+
+Escribir (“Ingrese la coordenada del punto X en A: ”);
+Leer (puntoAX);
+Escribir (“Ingrese la coordenada del punto Y en A: ”);
+Leer (puntoAY);
+Escribir (“Ingrese la coordenada del punto X en B: ”);
+Leer (puntoBX);
+Escribir (“Ingrese la coordenada del punto Y en B: ”);
+Leer (puntoBY);
+
+	pendiente= (puntoBY-puntoAY)/(puntoBX-puntoAX);
+	anguloEnRadianes=atan(pendiente); 
+	anguloInclinacion=(anguloEnRadianes/Pi) *180;
+
+Escribir ("La pendiente entre los puntos A y B es:" + pendiente);
+Escribir ("El angulo de inclinacion en grados es: ” + anguloInclinacion);
+
+Fin 
+

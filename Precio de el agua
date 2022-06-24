@@ -1,0 +1,51 @@
+Análisis y determinación de requerimiento:
+-----------------------------------------
+Datos de entrada           Datos de salida
+ancho						pago		
+largo	
+profundidad	
+
+Esquemas adicionales:
+--------------------
+-Volumen: Es una magnitud escalar definida como el espacio ocupado 
+		volumen = (ancho * largo * profundidad)
+
+-Para conseguir el precio que se debe pagar utilizaeremos esta formula:
+		pago = volumen*costo
+
+Requerimientos:
+	--------------   
+	                Este algoritmo nos permite determinar el pago del agua potable 
+
+Diseno:
+-------
+1) Solicitar el valor del ancho en metros de su alberca
+2) Solicitar el valor del largo en metros de su alberca
+3) Solicitar el valor de la profundidad en metros de su alberca
+4) Aplicar la formula para encontrar el volumen : volumen = (ancho * largo * profundidad)
+5)Aplicar la formula : pago = volumen*costo
+6) Mostrar el valor a pagar que debe realizar la persona propietaria de la alberca
+
+Implementacion
+--------------
+Inicio
+
+Variables
+		Real profundidad, largo, ancho, volumen, pago;
+Constantes 
+          Real costo = 1.25;
+Escribir (“Ingrese el valor del ancho en metros de su alberca: ”);
+Leer (ancho);
+Escribir (“Ingrese el valor del largo en metros de su alberca:”);
+Leer (largo);
+Escribir (“Ingrese el valor del la profunidad en metros de su alberca:”);
+Leer (profundidad);
+ 
+volumen = (ancho * largo * profundidad);
+pago = volumen*costo;
+
+Escribir (“El valor a pagar para usted es por su alberca es :$ "  + pago);
+
+Fin
+
+

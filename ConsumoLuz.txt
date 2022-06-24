@@ -1,0 +1,55 @@
+ANALISIS Y DETERMINACION DE REQUERIMIENTOS
+------------------------------------------
+DATOS DE ENTRADA                         DATOS DE SALIDA
+-LecturaConsumoKw                        PagoTotal
+                                         ConsumoEnergiaElectrica
+                                         PreservacionMedioAmbiente
+
+ESQUEMAS ADICIONALES
+--------------------------------------------
+ConsumoEnergiaElectrica = LecturaConsumoKw * PrecioKw
+PreservacionMedioAmbiente = ConsumoEnergiaElectrica * 0.07
+PagoTotal = ConsumoEnergiaElectrica + AlumbradoPublico + PreservacionMedioAmbiente
+
+REQUERIMIENTOS
+------------------------------------
+Este algoritmo mos va a permitir calcular el valor a pagar por el consumo de la luz
+
+DISEÑO
+---------------------
+1) Solicitar el valor del Comsumo del medidor;
+2) Mostrar el valor del consumo del medidor;
+3) Solicitar el valor precio por Kw; 
+4) Mostrar el valor del precio por Kw;
+5) Calcular el Consumo de la Energia Electrica con la formula: ConsumoEnergiaElectrica = LecturaConsumoKw * PrecioKw;
+6) Calcular el valor de la Preservacion del Medio ambiente con la formula: PreservacionMedioAmbiente = ConsumoEnergiaElectrica * 0.07;
+7) Calcular el valor total a pagar por el cliente:agoTotal = ConsumoEnergiaElectrica + AlumbradoPublico + PreservacionMedioAmbiente;
+8) Mostrar el valor del Consumo de la Energia Electrica;
+9) Mostrar el valor del alumbrado publico;
+10) Mostrar el valor de la Preservacion del Medio ambiente;
+11) Mostrar el Total a pagar por el cliente;
+
+IMPLEMENTACION
+-----------------------------------------------
+Algoritmo ValorAPagarConsumoLuz
+
+Constantes
+Real RubroPreservacionMedioAmbiente = 0.07;
+Real AlumbradoPublico = 1.50;
+
+Variables
+Real LecturaConsumoKw, PrecioKw, ConsumoEnergiaElectrica, PreservacionMedioAmbiente, PagoTotal;
+
+INICIO
+ESCRIBIR("Ingrese el valor del Comsumo del medidor");
+LEER(LecturaConsumoKw);
+ESCRIBIR("Ingrese el valor del precio por Kw");
+LEER(PrecioKw);
+ConsumoEnergiaElectrica = LecturaConsumoKw * PrecioKw;
+PreservacionMedioAmbiente = ConsumoEnergiaElectrica * 0.07;
+PagoTotal = ConsumoEnergiaElectrica + AlumbradoPublico + PreservacionMedioAmbiente;
+ESCRIBIR("Valor del Consumo por la Energia Electrica: ");
+ESCRIBIR("Valor del alumbrado publico: ");
+ESCRIBIR("Valor de la Preservacion del Medio ambiente: ");
+ESCRIBIR("Total a pagar por el cliente: ");
+FIN
